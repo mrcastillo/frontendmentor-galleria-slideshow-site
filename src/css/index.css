@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#root {
+  height: 100%; }
+
+html, body {
+  height: 100%;
+  font-family: 'Libre Baskerville', serif; }
+
+.app-container {
+  width: 100%; }
+  .app-container .menu-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 80px;
+    padding: 0em 1em;
+    border-bottom: 1px solid #E5E5E5; }
+    .app-container .menu-container .menu-header {
+      flex: 1; }
+      .app-container .menu-container .menu-header h1 {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left; }
+    .app-container .menu-container .menu-start-slide-wrapper {
+      flex: 1;
+      justify-self: flex-end; }
+      .app-container .menu-container .menu-start-slide-wrapper p {
+        text-align: right;
+        font-size: 12px;
+        line-height: link-1-line-height;
+        letter-spacing: link-1-ls;
+        color: #7D7D7D;
+        font-weight: 600; }
+  .app-container .galleria-container {
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    margin: 1.5em; }
+    .app-container .galleria-container .box250 {
+      height: 250px; }
+    .app-container .galleria-container .box260 {
+      height: 260px; }
+    .app-container .galleria-container .box285 {
+      height: 285px; }
+    .app-container .galleria-container .box330 {
+      height: 330px; }
+    .app-container .galleria-container .box340 {
+      height: 340px; }
+    .app-container .galleria-container .box400 {
+      height: 400px; }
+    .app-container .galleria-container .box420 {
+      height: 420px; }
+    .app-container .galleria-container .box500 {
+      height: 500px; }
+    .app-container .galleria-container .box525 {
+      height: 525px; }
+    .app-container .galleria-container .galleria-image-box {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      background: url("../assets/starry-night/hero-small.jpg");
+      background-size: cover; }
+      .app-container .galleria-container .galleria-image-box .galleria-image-text h1 {
+        color: white;
+        font-size: 24px; }
+      .app-container .galleria-container .galleria-image-box .galleria-image-text h3 {
+        color: white;
+        opacity: .5; }

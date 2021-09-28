@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "./variables/variables.scss";
+@import "./reset/reset.scss";
+
+#root {
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+.app-container {
+    width: 100%;
+
+    .menu-container {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        height: 80px;
+        padding: 0em 1em;
+        border-bottom: 1px solid $med-gray;
+
+        .menu-header {
+            flex: 1;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 700;
+                text-align: left;
+            }
+        }
+
+        .menu-start-slide-wrapper {
+            flex: 1;
+            justify-self: flex-end;
+
+            p {
+                text-align: right;
+                font-size: $link-1-s;
+                line-height: link-1-line-height;
+                letter-spacing: link-1-ls;
+                color: $dark-gray;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .galleria-container {
+        .box250{ height:250px; }
+        .box260{ height:260px; }
+        .box285{ height:285px; }
+        .box330{ height:330px; }
+        .box340{ height:340px; }
+        .box400{ height:400px; }
+        .box420{ height:420px; }
+        .box500{ height:500px; }
+        .box525{ height:525px; }
+
+        display: flex;
+        flex-flow: column;
+        gap: 25px;
+        margin: 1.5em;
+
+        .galleria-image-box {
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            background: url("../assets/starry-night/hero-small.jpg");
+            background-size: cover;
+            //margin: 1.5em;
+
+            .galleria-image-text {
+                
+                h1 {
+                    color: white;
+                    font-size: $head-2-size;
+                }
+
+                h3 {
+                    color: white;
+                    opacity: .5;
+                }
+
+                
+            }
+        }
+    }
+}
