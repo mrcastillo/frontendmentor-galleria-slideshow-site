@@ -18,6 +18,7 @@ html, body {
     .app-spacer {
         height: 80px;
     }
+
     .menu-container {
         height: 80px;
         border-bottom: 1px solid $med-gray;
@@ -41,6 +42,7 @@ html, body {
                     font-size: 30px;
                     font-weight: 700;
                     text-align: left;
+                    color: black;
                 }
             }
     
@@ -83,13 +85,19 @@ html, body {
             display: flex;
             flex-flow: column;
             justify-content: flex-end;
-
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            box-shadow: inset 0 0 100px black;
+            
             //margin: 1.5em;
 
             .galleria-image-text {
                 
                 margin-left: 2em;
                 margin-bottom: 2em;
+                
                 h1 {
                     color: white;
                     font-size: $head-2-size;
@@ -100,6 +108,7 @@ html, body {
                 h3 {
                     color: white;
                     opacity: .8;
+                    font-weight: 400;
                 }
 
                 

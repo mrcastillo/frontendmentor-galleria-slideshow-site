@@ -1,7 +1,19 @@
+import { React } from "react";
+import galleria from "./assets/data.json";
+
+//A Function that returns our image boxes based on our images in the galleria
+const returnGalleriaImageBox = () => {
+
+  console.log(galleria)
+}
+
 function App() {
+
+  returnGalleriaImageBox()
   return (
     <div className="app-container">
-      <div className={"app-spacer"}></div>
+      <div className={"app-spacer"}>menu-header</div>
+
 
       <div className={"menu-container"}>
         <div className={"menu-flex-container"}>
@@ -27,7 +39,7 @@ function App() {
         <div className={"galleria-image-box box400 pearl-earring"}>
           
           <div className={"galleria-image-text"}>
-            <h1>GIrl with a Pearl Earring</h1>
+            <h1>Girl with a Pearl Earring</h1>
             <h3>Johannes Vermeer</h3>
           </div>
         </div>
