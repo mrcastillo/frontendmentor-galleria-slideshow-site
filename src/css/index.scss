@@ -15,37 +15,51 @@ html, body {
 .app-container {
     height: 100%;
 
-    .menu-container {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
+    .app-spacer {
         height: 80px;
-        padding: 0em 1em;
+    }
+    .menu-container {
+        height: 80px;
         border-bottom: 1px solid $med-gray;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        background: white;
 
-        .menu-header {
-            flex: 1;
+        .menu-flex-container {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            height: 100%;
+            padding: 0em 1em;
 
-            h1 {
-                font-size: 30px;
-                font-weight: 700;
-                text-align: left;
+            .menu-header {
+                flex: 1;
+    
+                h1 {
+                    font-size: 30px;
+                    font-weight: 700;
+                    text-align: left;
+                }
+            }
+    
+            .menu-start-slide-wrapper {
+                flex: 1;
+                justify-self: flex-end;
+                
+                p {
+                    text-align: right;
+                    font-size: $link-1-s;
+                    line-height: link-1-line-height;
+                    letter-spacing: link-1-ls;
+                    color: $dark-gray;
+                    font-weight: 600;
+                }
             }
         }
-
-        .menu-start-slide-wrapper {
-            flex: 1;
-            justify-self: flex-end;
-            
-            p {
-                text-align: right;
-                font-size: $link-1-s;
-                line-height: link-1-line-height;
-                letter-spacing: link-1-ls;
-                color: $dark-gray;
-                font-weight: 600;
-            }
-        }
+        
+        
     }
 
     .galleria-container {

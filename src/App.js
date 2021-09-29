@@ -1,12 +1,16 @@
 function App() {
   return (
     <div className="app-container">
+      <div className={"app-spacer"}></div>
+
       <div className={"menu-container"}>
-        <div className={"menu-header"}>
-          <h1>galleria.</h1>
-        </div>
-        <div className={"menu-start-slide-wrapper"}>
-          <p>START SLIDE SHOW</p>
+        <div className={"menu-flex-container"}>
+          <div className={"menu-header"}>
+            <h1>galleria.</h1>
+          </div>
+          <div className={"menu-start-slide-wrapper"}>
+            <p>START SLIDE SHOW</p>
+          </div>
         </div>
       </div>
 

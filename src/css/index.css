@@ -1,48 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 .starry-night {
-  background: url("../assets/starry-night/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/starry-night/hero-small.jpg") no-repeat center; }
 
 .pearl-earring {
-  background: url("../assets/girl-with-pearl-earring/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/girl-with-pearl-earring/hero-small.jpg") no-repeat center; }
 
 .guernica {
-  background: url("../assets/guernica/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/guernica/hero-small.jpg") no-repeat center; }
 
 .magdalene {
-  background: url("../assets/penitent-magdalene/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/penitent-magdalene/hero-small.jpg") no-repeat center; }
 
 .galilee {
-  background: url("../assets/the-storm-on-the-sea-of-galilee/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-storm-on-the-sea-of-galilee/hero-small.jpg") no-repeat center; }
 
 .kanagawa {
-  background: url("../assets/the-great-wave-off-kanagawa/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-great-wave-off-kanagawa/hero-small.jpg") no-repeat center; }
 
 .van-gogh-self {
-  background: url("../assets/van-gogh-self-portrait/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/van-gogh-self-portrait/hero-small.jpg") no-repeat center; }
 
 .sleeping-gypsy {
-  background: url("../assets/the-sleeping-gypsy/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-sleeping-gypsy/hero-small.jpg") no-repeat center; }
 
 .ermine {
-  background: url("../assets/lady-with-an-ermine/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/lady-with-an-ermine/hero-small.jpg") no-repeat center; }
 
 .night-cafe {
-  background: url("../assets/the-night-cafe/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-night-cafe/hero-small.jpg") no-repeat center; }
 
 .basket-apples {
-  background: url("../assets/the-basket-of-apples/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-basket-of-apples/hero-small.jpg") no-repeat center; }
 
 .red-vest {
-  background: url("../assets/the-boy-in-the-red-vest/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-boy-in-the-red-vest/hero-small.jpg") no-repeat center; }
 
 .arnolfini {
-  background: url("../assets/arnolfini-portrait/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/arnolfini-portrait/hero-small.jpg") no-repeat center; }
 
 .mona-lisa {
-  background: url("../assets/mona-lisa/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/mona-lisa/hero-small.jpg") no-repeat center; }
 
 .the-swing {
-  background: url("../assets/the-swing/hero-small.jpg") no-repeat fixed center; }
+  background: url("../assets/the-swing/hero-small.jpg") no-repeat center; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -92,29 +92,38 @@ html, body {
 
 .app-container {
   height: 100%; }
+  .app-container .app-spacer {
+    height: 80px; }
   .app-container .menu-container {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
     height: 80px;
-    padding: 0em 1em;
-    border-bottom: 1px solid #E5E5E5; }
-    .app-container .menu-container .menu-header {
-      flex: 1; }
-      .app-container .menu-container .menu-header h1 {
-        font-size: 30px;
-        font-weight: 700;
-        text-align: left; }
-    .app-container .menu-container .menu-start-slide-wrapper {
-      flex: 1;
-      justify-self: flex-end; }
-      .app-container .menu-container .menu-start-slide-wrapper p {
-        text-align: right;
-        font-size: 12px;
-        line-height: link-1-line-height;
-        letter-spacing: link-1-ls;
-        color: #7D7D7D;
-        font-weight: 600; }
+    border-bottom: 1px solid #E5E5E5;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background: white; }
+    .app-container .menu-container .menu-flex-container {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      height: 100%;
+      padding: 0em 1em; }
+      .app-container .menu-container .menu-flex-container .menu-header {
+        flex: 1; }
+        .app-container .menu-container .menu-flex-container .menu-header h1 {
+          font-size: 30px;
+          font-weight: 700;
+          text-align: left; }
+      .app-container .menu-container .menu-flex-container .menu-start-slide-wrapper {
+        flex: 1;
+        justify-self: flex-end; }
+        .app-container .menu-container .menu-flex-container .menu-start-slide-wrapper p {
+          text-align: right;
+          font-size: 12px;
+          line-height: link-1-line-height;
+          letter-spacing: link-1-ls;
+          color: #7D7D7D;
+          font-weight: 600; }
   .app-container .galleria-container {
     display: flex;
     flex-flow: column;
