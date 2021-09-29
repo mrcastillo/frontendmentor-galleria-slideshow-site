@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+.starry-night {
+  background: url("../assets/starry-night/hero-small.jpg") no-repeat fixed center; }
+
+.pearl-earring {
+  background: url("../assets/girl-with-pearl-earring/hero-small.jpg") no-repeat fixed center; }
+
+.guernica {
+  background: url("../assets/guernica/hero-small.jpg") no-repeat fixed center; }
+
+.magdalene {
+  background: url("../assets/penitent-magdalene/hero-small.jpg") no-repeat fixed center; }
+
+.galilee {
+  background: url("../assets/the-storm-on-the-sea-of-galilee/hero-small.jpg") no-repeat fixed center; }
+
+.kanagawa {
+  background: url("../assets/the-great-wave-off-kanagawa/hero-small.jpg") no-repeat fixed center; }
+
+.van-gogh-self {
+  background: url("../assets/van-gogh-self-portrait/hero-small.jpg") no-repeat fixed center; }
+
+.sleeping-gypsy {
+  background: url("../assets/the-sleeping-gypsy/hero-small.jpg") no-repeat fixed center; }
+
+.ermine {
+  background: url("../assets/lady-with-an-ermine/hero-small.jpg") no-repeat fixed center; }
+
+.night-cafe {
+  background: url("../assets/the-night-cafe/hero-small.jpg") no-repeat fixed center; }
+
+.basket-apples {
+  background: url("../assets/the-basket-of-apples/hero-small.jpg") no-repeat fixed center; }
+
+.red-vest {
+  background: url("../assets/the-boy-in-the-red-vest/hero-small.jpg") no-repeat fixed center; }
+
+.arnolfini {
+  background: url("../assets/arnolfini-portrait/hero-small.jpg") no-repeat fixed center; }
+
+.mona-lisa {
+  background: url("../assets/mona-lisa/hero-small.jpg") no-repeat fixed center; }
+
+.the-swing {
+  background: url("../assets/the-swing/hero-small.jpg") no-repeat fixed center; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,15 +87,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-#root {
-  height: 100%; }
-
 html, body {
-  height: 100%;
   font-family: 'Libre Baskerville', serif; }
 
 .app-container {
-  width: 100%; }
+  height: 100%; }
   .app-container .menu-container {
     display: flex;
     flex-flow: row;
@@ -83,6 +124,8 @@ html, body {
       height: 250px; }
     .app-container .galleria-container .box260 {
       height: 260px; }
+    .app-container .galleria-container .box280 {
+      height: 280px; }
     .app-container .galleria-container .box285 {
       height: 285px; }
     .app-container .galleria-container .box330 {
@@ -100,12 +143,15 @@ html, body {
     .app-container .galleria-container .galleria-image-box {
       display: flex;
       flex-flow: column;
-      justify-content: flex-end;
-      background: url("../assets/starry-night/hero-small.jpg");
-      background-size: cover; }
-      .app-container .galleria-container .galleria-image-box .galleria-image-text h1 {
-        color: white;
-        font-size: 24px; }
-      .app-container .galleria-container .galleria-image-box .galleria-image-text h3 {
-        color: white;
-        opacity: .5; }
+      justify-content: flex-end; }
+      .app-container .galleria-container .galleria-image-box .galleria-image-text {
+        margin-left: 2em;
+        margin-bottom: 2em; }
+        .app-container .galleria-container .galleria-image-box .galleria-image-text h1 {
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: .5em; }
+        .app-container .galleria-container .galleria-image-box .galleria-image-text h3 {
+          color: white;
+          opacity: .8; }
