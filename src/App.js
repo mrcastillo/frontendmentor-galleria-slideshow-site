@@ -1,54 +1,35 @@
 import { React } from "react";
-import galleriaData from "./assets/data.json";
-import _ from "lodash";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-//A Function that returns our image boxes based on our images in the galleria
-const returnGalleriaImageBox = (galleria) => {
-  const boxSizesArray = ["250", "400", "285", "250", "340", "280", "500", "250", "420", "260", "430", "260", "330", "525", "340"];
+import Menu from "./components/Menu";
+import Galleria from "./components/Galleria";
+import SlideShow from "./components/SlideShow";
 
-  const galleriaImageBoxElements = [];
-  var counter = 0;
-
-  _.forEach(galleria, (image) => {
-    var imageNameConversion = image.name.toLowerCase();
-    imageNameConversion =  imageNameConversion.replaceAll(" ", "-");
-
-    galleriaImageBoxElements.push(
-      <div className={`galleria-image-box box${boxSizesArray[counter]} ${imageNameConversion}`}>
-        <div className={"galleria-image-text"}>
-          <h1>{image.name}</h1>
-          <h3>{image.artist.name}</h3>
-        </div>
-      </div>
-    );
-    console.log(counter);
-    counter++;
-  });
-  
-  return galleriaImageBoxElements;
-};
-
+const NoMatch = () => {
+  return(
+    <div classname={"no-match"}>
+      <h1>No Page Found</h1>
+      <p>Go Back Home</p>
+    </div>
+  )
+}
 function App() {
-  console.log(galleriaData)
   return (
     <div className="app-container">
-      <div className={"app-spacer"}>menu-header</div>
+      <div className={"app-spacer"}>Tet</div>
 
+      
 
-      <div className={"menu-container"}>
-        <div className={"menu-flex-container"}>
-          <div className={"menu-header"}>
-            <h1>galleria.</h1>
-          </div>
-          <div className={"menu-start-slide-wrapper"}>
-            <p>START SLIDE SHOW</p>
-          </div>
-        </div>
-      </div>
+      <Router>
+        <Route path={"/"} component={Menu} />
 
-      <div className={"galleria-container"}>
-        {returnGalleriaImageBox(galleriaData)}
-      </div>
+        <Switch>
+          <Route exact path={"/"} component={Galleria} />
+          <Route path={"/slideshow"} component={SlideShow} />
+          <Route component={NoMatch} />
+        </Switch>
+        
+      </Router>
     </div>
   );
 }
