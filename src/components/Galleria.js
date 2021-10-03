@@ -23,7 +23,7 @@ const returnGalleriaImageBox = (galleria) => {
 
         //Push our HTML element to array now that we generated CSS classes for them
         galleriaImageBoxElements.push(
-        <Link to={"/slideshow"} className={`galleria-image-box box${boxSizesArray[counter]} ${imageNameConversion}`}>
+        <Link to={{pathname: "/slideshow", state:{currentGallery: imageNameConversion}}} className={`galleria-image-box box${boxSizesArray[counter]} ${imageNameConversion}`}>
             <div className={"galleria-image-text"}>
                 <h1>{image.name}</h1>
                 <h3>{image.artist.name}</h3>
