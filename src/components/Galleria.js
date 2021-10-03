@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import galleriaData from "../assets/data.json";
+import galleriaData from "../json/data.json";
 import _ from "lodash";
 
 //A Function that returns our image boxes based on our images in the galleria
