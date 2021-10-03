@@ -91,6 +91,9 @@ table {
 html, body {
   font-family: 'Libre Baskerville', serif; }
 
+a {
+  text-decoration: none; }
+
 .app-container {
   height: 100%; }
   .app-container .app-spacer {
@@ -261,7 +264,7 @@ html, body {
       line-height: 28px; }
     .app-container .slide-show-container .slide-show-source {
       padding: 3em 0em 2em 0em; }
-      .app-container .slide-show-container .slide-show-source p {
+      .app-container .slide-show-container .slide-show-source a {
         font-size: 11px;
         color: #7D7D7D;
         text-decoration: underline;
