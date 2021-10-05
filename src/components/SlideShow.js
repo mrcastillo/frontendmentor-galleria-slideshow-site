@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 
-//import star from "../assets/starry-night/gallery.jpg";
-//import viewIcon from "../assets/shared/icon-view-image.svg";
-//import artist from "../assets/starry-night/artist.jpg";
-//import previous from "../assets/shared/icon-back-button.svg";
-//import next from "../assets/shared/icon-next-button.svg";
-
 import galleriaData from "../json/data.json";
 
 function SlideShow(props) {
-    const clickedGalleryName = props.location.state.currentGallery;
+    var clickedGalleryName = "starry-night";
 
+    if(typeof props.location.state === "undefined") {
+    } else {
+        clickedGalleryName = props.location.state.currentGallery;
+    }
+    
     const [ gallery, setGallery ] = useState(() => {
         
         var currentGallery = {}

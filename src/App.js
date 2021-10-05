@@ -16,9 +16,7 @@ const NoMatch = () => {
 function App() {
   return (
     <div className="app-container">
-      <div className={"app-spacer"}>Tet</div>
-
-      
+      <div className={"app-spacer"}>T</div>
 
       <Router>
         <Route path={"/"} component={Menu} />
