@@ -14,10 +14,10 @@ function SlideShow(props) {
     const [ gallery, setGallery ] = useState(() => {
         
         var currentGallery = {}
-        _.forEach(galleriaData, (gallery) => {
-            const galleryName = gallery.name.toLowerCase().replaceAll(" ", "-");
+        _.forEach(galleriaData, (galleryData) => {
+            const galleryName = galleryData.name.toLowerCase().replaceAll(" ", "-");
             if(galleryName === clickedGalleryName) {
-                currentGallery = gallery;
+                currentGallery = galleryData;
                 return;
             } else {
                 return gallery[0];
@@ -43,8 +43,11 @@ function SlideShow(props) {
     };
  
     const nextImage = (e) => {
-        console.log(e.currentTarget);
-        console.log(clickedGalleryName)
+        
+        var arrayPosition = 0;
+        _.forEach(galleriaData, (gallery) => {
+            //if(gallery.name = )
+        });
     }
 
     const previousImage = (e) => {
