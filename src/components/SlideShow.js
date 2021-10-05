@@ -42,6 +42,15 @@ function SlideShow(props) {
         slideOverlay[0].style.width = "0%";
     };
  
+    const nextImage = (e) => {
+        console.log(e.currentTarget);
+        console.log(clickedGalleryName)
+    }
+
+    const previousImage = (e) => {
+        console.log(e.currentTarget);
+    }
+
     return (
         <React.Fragment>
             <div className={"slide-show-container"}>
@@ -108,10 +117,10 @@ function SlideShow(props) {
                         <p id={"artist"}>{gallery.artist.name}</p>
                     </div>
                     <div className={"slide-show-artist-title-next-previous"}>
-                        <div className={"slide-show-artist-title-next-previous-icon"}>
+                        <div onClick={previousImage} className={"slide-show-artist-title-next-previous-icon"}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-back-button.svg`} alt={"previous"} />
                         </div>
-                        <div className={"slide-show-artist-title-next-previous-icon"}>
+                        <div onClick={nextImage} className={"slide-show-artist-title-next-previous-icon"}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-next-button.svg`} alt={"next"} />
                         </div>
                     </div>
