@@ -1,36 +1,17 @@
 import React, { useEffect, useState } from "react";
-import _ from "lodash";
-
-import galleriaData from "../json/data.json";
+import galleriaJSON from "../json/data.json";
 
 function SlideShow(props) {
-    var clickedGalleryName = "starry-night";
-
-    if(typeof props.location.state === "undefined") {
-    } else {
-        clickedGalleryName = props.location.state.currentGallery;
-    }
+    const [ galleriaIndex, setGalleriaIndex ] = useState(() => {
+        if(typeof props.location.state === "undefined") {
+            } else {
+                return props.location.state.galleryIndex;
+            }
+    });
     
     const [ gallery, setGallery ] = useState(() => {
-        
-        var currentGallery = {}
-        _.forEach(galleriaData, (galleryData) => {
-            const galleryName = galleryData.name.toLowerCase().replaceAll(" ", "-");
-            if(galleryName === clickedGalleryName) {
-                currentGallery = galleryData;
-                return;
-            } else {
-                return gallery[0];
-            }
-        });
-
-        return(currentGallery)
+        return galleriaJSON[galleriaIndex];
     });
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-    
 
     const openImage = () => {
         const slideOverlay = document.getElementsByClassName("slide-show-overlay");
@@ -43,16 +24,22 @@ function SlideShow(props) {
     };
  
     const nextImage = (e) => {
-        
-        var arrayPosition = 0;
-        _.forEach(galleriaData, (gallery) => {
-            //if(gallery.name = )
-        });
-    }
+        var newGalleriaIndex = galleriaIndex + 1;
+        setGallery(galleriaJSON[newGalleriaIndex]);
+        setGalleriaIndex(newGalleriaIndex);
+    };
 
     const previousImage = (e) => {
-        console.log(e.currentTarget);
+        var previousGalleriaIndex = galleriaIndex - 1;
+
+
+        setGallery(galleriaJSON[previousGalleriaIndex]);
+        setGalleriaIndex(previousGalleriaIndex);
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [galleriaIndex]);
 
     return (
         <React.Fragment>
