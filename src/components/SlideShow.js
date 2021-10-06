@@ -1,16 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { isCompositeComponent } from "react-dom/test-utils";
 import galleriaJSON from "../json/data.json";
 
+import { SlideShowContext } from "./context/SlideShowContext";
+
 function SlideShow(props) {
-    const [ galleriaIndex, setGalleriaIndex ] = useState(() => {
+
+    const { isSlideShowActive, setActiveSlideShow } = useContext(SlideShowContext);
+
+    console.log(isSlideShowActive, "slideshow active")
+    //Index of our Gallery 0-14. This is used to set which image info we will render
+    var [ galleriaIndex, setGalleriaIndex ] = useState(() => {
         if(typeof props.location.state === "undefined") {
             } else {
                 return props.location.state.galleryIndex;
             }
     });
     
-    const [ gallery, setGallery ] = useState(() => {
+    //Gallery JSON with our data on current gallery.
+    var [ gallery, setGallery ] = useState(() => {
         return galleriaJSON[galleriaIndex];
+    });
+
+    var [ playlistProgress, setPlaylistProgress ] = useState(()=> {
+        var playlistPercent = (galleriaIndex / galleriaJSON.length) * 100;
+        return playlistPercent;
     });
 
     const openImage = () => {
@@ -22,24 +36,69 @@ function SlideShow(props) {
         const slideOverlay = document.getElementsByClassName("slide-show-overlay");
         slideOverlay[0].style.width = "0%";
     };
- 
-    const nextImage = (e) => {
-        var newGalleriaIndex = galleriaIndex + 1;
-        setGallery(galleriaJSON[newGalleriaIndex]);
-        setGalleriaIndex(newGalleriaIndex);
+
+    const nextImage = () => {
+        var nextGalleriaIndex = galleriaIndex + 1;
+
+        if(nextGalleriaIndex >= galleriaJSON.length) {
+            //window.scrollTo(0, 0);
+            setActiveSlideShow(false);
+            return null;
+        } 
+
+        setGallery(galleriaJSON[nextGalleriaIndex]);
+        setGalleriaIndex(nextGalleriaIndex);
     };
 
     const previousImage = (e) => {
         var previousGalleriaIndex = galleriaIndex - 1;
-
-
+        if(previousGalleriaIndex < 0) {
+            //window.scrollTo(0, 0);
+            return null;
+        }
         setGallery(galleriaJSON[previousGalleriaIndex]);
         setGalleriaIndex(previousGalleriaIndex);
-    }
+    };
+
+    const startSlideShow = () => {
+        setTimeout(() => {
+            if(isSlideShowActive){
+                nextImage();
+            }
+        },  1000*5);
+    };
+
+    
+    window.addEventListener("scroll", (e) => {
+        setActiveSlideShow(false)
+    });
+    
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [galleriaIndex]);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        var nextButton = document.getElementsByClassName("slide-show-artist-title-next-previous-icon")[1];
+        if(galleriaIndex + 1 >= galleriaJSON.length) {
+           nextButton.classList.add("disable");
+        } else {
+            nextButton.classList.remove("disable");
+        }
+
+        var previousButton = document.getElementsByClassName("slide-show-artist-title-next-previous-icon")[0];
+        if(galleriaIndex - 1 < 0) { 
+            previousButton.classList.add("disable");
+        } else {
+            previousButton.classList.remove("disable");
+        }
+
+        var playlistPercent = ((galleriaIndex + 1) / galleriaJSON.length) * 100;
+        setPlaylistProgress(playlistPercent);
+
+        startSlideShow();
+    }, [galleriaIndex, isSlideShowActive]);
 
     return (
         <React.Fragment>
@@ -98,7 +157,8 @@ function SlideShow(props) {
 
             <div className={"slide-show-playlist"}>
                 <div className={"slide-show-playlist-loading-bar"}>
-                    <hr />
+                    <hr id={"hr-100"}/>
+                    <hr id={"hr-custom"} style={{width: `${playlistProgress}%` }}/>
                 </div>
 
                 <div className={"slide-show-artist-title"}>
@@ -110,7 +170,7 @@ function SlideShow(props) {
                         <div onClick={previousImage} className={"slide-show-artist-title-next-previous-icon"}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-back-button.svg`} alt={"previous"} />
                         </div>
-                        <div onClick={nextImage} className={"slide-show-artist-title-next-previous-icon"}>
+                        <div onClick={nextImage} className={`slide-show-artist-title-next-previous-icon `}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-next-button.svg`} alt={"next"} />
                         </div>
                     </div>

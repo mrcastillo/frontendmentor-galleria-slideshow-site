@@ -10,11 +10,11 @@ const returnGalleriaImageBox = () => {
     const galleriaImageBoxElements = [];
 
     for(var i = 0; i < galleriaJSON.length; i++) {
-        console.log(galleriaJSON[i], `${i}`);
+        //console.log(galleriaJSON[i], `${i}`);
         const gallery = galleriaJSON[i].name.toLowerCase().replaceAll(" ", "-");
 
         galleriaImageBoxElements.push(
-            <Link to={{pathname: "/slideshow", state:{galleryIndex: i}}} className={`galleria-image-box box${boxSizesArray[i]} ${gallery}`}>
+            <Link key={i} to={{pathname: "/slideshow", state:{galleryIndex: i, isGalleryActive: false}}} className={`galleria-image-box box${boxSizesArray[i]} ${gallery}`}>
                 <div className={"galleria-image-text"}>
                     <h1>{galleriaJSON[i].name}</h1>
                     <h3>{galleriaJSON[i].artist.name}</h3>
@@ -22,6 +22,7 @@ const returnGalleriaImageBox = () => {
             </Link>
         );
     }
+
     return galleriaImageBoxElements;
 };
 
