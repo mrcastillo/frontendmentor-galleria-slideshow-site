@@ -1,25 +1,21 @@
 import React, { useEffect, useState, useContext } from "react";
-import { isCompositeComponent } from "react-dom/test-utils";
 import galleriaJSON from "../json/data.json";
 
 import { SlideShowContext } from "./context/SlideShowContext";
+import { GalleriaIndexContext } from "./context/GalleriaIndexContext";
 
 function SlideShow(props) {
 
-    const { isSlideShowActive, setActiveSlideShow } = useContext(SlideShowContext);
+    var { isSlideShowActive, setActiveSlideShow } = useContext(SlideShowContext);
+    var { galleriaIndex, setGalleriaIndex } = useContext(GalleriaIndexContext);
 
-    console.log(isSlideShowActive, "slideshow active")
-    //Index of our Gallery 0-14. This is used to set which image info we will render
-    var [ galleriaIndex, setGalleriaIndex ] = useState(() => {
-        if(typeof props.location.state === "undefined") {
-            } else {
-                return props.location.state.galleryIndex;
-            }
-    });
-    
     //Gallery JSON with our data on current gallery.
     var [ gallery, setGallery ] = useState(() => {
-        return galleriaJSON[galleriaIndex];
+        if(typeof props.location.state === "undefined"){
+            return galleriaJSON[0];
+        }
+        setGalleriaIndex(props.location.state.galleryIndex);
+        return galleriaJSON[props.location.state.galleryIndex];
     });
 
     var [ playlistProgress, setPlaylistProgress ] = useState(()=> {
@@ -35,6 +31,7 @@ function SlideShow(props) {
     const closeImage = () => {
         const slideOverlay = document.getElementsByClassName("slide-show-overlay");
         slideOverlay[0].style.width = "0%";
+        setActiveSlideShow(false);
     };
 
     const nextImage = () => {
@@ -60,29 +57,19 @@ function SlideShow(props) {
         setGalleriaIndex(previousGalleriaIndex);
     };
 
-    const startSlideShow = () => {
-        setTimeout(() => {
-            if(isSlideShowActive){
-                nextImage();
-            }
-        },  1000*5);
-    };
-
-    
     window.addEventListener("scroll", (e) => {
         setActiveSlideShow(false)
     });
-    
 
     useEffect(() => {
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            top: 0
         });
 
         var nextButton = document.getElementsByClassName("slide-show-artist-title-next-previous-icon")[1];
         if(galleriaIndex + 1 >= galleriaJSON.length) {
            nextButton.classList.add("disable");
+           setActiveSlideShow(false);
         } else {
             nextButton.classList.remove("disable");
         }
@@ -97,7 +84,9 @@ function SlideShow(props) {
         var playlistPercent = ((galleriaIndex + 1) / galleriaJSON.length) * 100;
         setPlaylistProgress(playlistPercent);
 
-        startSlideShow();
+        setGallery(galleriaJSON[galleriaIndex]);
+        
+
     }, [galleriaIndex, isSlideShowActive]);
 
     return (

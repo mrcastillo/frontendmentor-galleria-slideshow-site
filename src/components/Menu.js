@@ -1,20 +1,16 @@
 import { useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
+
 import { SlideShowContext } from "./context/SlideShowContext";
+import { GalleriaIndexContext } from "./context/GalleriaIndexContext";
 
 function Menu() {
 
     const { isSlideShowActive, setActiveSlideShow } = useContext(SlideShowContext);
+    var { galleriaIndex, setGalleriaIndex } = useContext(GalleriaIndexContext);
 
-    
     const activateSlideShow = ( ) => {
-        console.log(isSlideShowActive, "menu");
-        
-        if(isSlideShowActive) {
-            setActiveSlideShow(false);
-        } else {
-            setActiveSlideShow(true);
-        }
+        setActiveSlideShow(true);
     };
 
     return (
@@ -23,9 +19,12 @@ function Menu() {
                 <Link to={"/"} className={"menu-header"}>
                     <h1>galleria.</h1>
                 </Link>
-                <div onClick={activateSlideShow} className={"menu-start-slide-wrapper"}>
+                <Link onClick={activateSlideShow} to={{
+                    pathname: "/slideshow",
+                    state: { galleryIndex: galleriaIndex }
+                }} className={"menu-start-slide-wrapper"}>
                     <p>START SLIDE SHOW</p>
-                </div>
+                </Link>
             </div>
         </div>
     );
