@@ -2,13 +2,14 @@
 @import "./variables/variables.scss";
 @import "./reset/reset.scss";
 
-#root {
-   
+html {
+    height: 100%;
 }
 
-html, body {
-    
+body, #root {
+    height: 100%;
     font-family: 'Libre Baskerville', serif;
+
 }
 
 a {
@@ -21,3 +22,4 @@ a {
 
 @import "./sizes/mobile.scss";
 @import "./sizes/tablet.scss";
+@import "./sizes/desktop.scss";

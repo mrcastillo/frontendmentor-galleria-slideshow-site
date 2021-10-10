@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { SlideShowContext } from "./context/SlideShowContext";
 import { GalleriaIndexContext } from "./context/GalleriaIndexContext";
 
 function Menu() {
 
-    const { isSlideShowActive, setActiveSlideShow } = useContext(SlideShowContext);
-    var { galleriaIndex, setGalleriaIndex } = useContext(GalleriaIndexContext);
+    const { setActiveSlideShow } = useContext(SlideShowContext);
+    var { galleriaIndex } = useContext(GalleriaIndexContext);
 
     const activateSlideShow = ( ) => {
         setActiveSlideShow(true);

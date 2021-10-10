@@ -1,13 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
-import { GalleriaIndexContext } from "./GalleriaIndexContext";
+import React, { createContext, useState, useEffect } from "react";
 
 export const SlideShowContext = createContext();
 
 const SlideShowProvider = (props) => {
 
     const [isSlideShowActive, setActiveSlideShow] = useState(false);
-
-    var { galleriaIndex, setGalleriaIndex } = useContext(GalleriaIndexContext);
 
     useEffect(() => {
         console.log(isSlideShowActive, "isSlideShowActive")

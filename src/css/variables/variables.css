@@ -1,45 +1,96 @@
 @charset "UTF-8";
-.starry-night {
-  background: url("../assets/starry-night/thumbnail.jpg") no-repeat center center; }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3), (max-device-width: 667px), (max-width: 767px) {
+  .starry-night {
+    background: url("../assets/starry-night/thumbnail.jpg") no-repeat center center; }
+  .girl-with-a-pearl-earring {
+    background: url("../assets/girl-with-pearl-earring/thumbnail.jpg") no-repeat center center; }
+  .guernica {
+    background: url("../assets/guernica/thumbnail.jpg") no-repeat center center; }
+  .penitent-magdalene {
+    background: url("../assets/penitent-magdalene/thumbnail.jpg") no-repeat center center; }
+  .the-storm-on-the-sea-of-galilee {
+    background: url("../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg") no-repeat center center; }
+  .the-great-wave-off-kanagawa {
+    background: url("../assets/the-great-wave-off-kanagawa/thumbnail.jpg") no-repeat center center; }
+  .van-gogh-self-portrait {
+    background: url("../assets/van-gogh-self-portrait/thumbnail.jpg") no-repeat center center; }
+  .the-sleeping-gypsy {
+    background: url("../assets/the-sleeping-gypsy/thumbnail.jpg") no-repeat center center; }
+  .lady-with-an-ermine {
+    background: url("../assets/lady-with-an-ermine/thumbnail.jpg") no-repeat center center; }
+  .the-night-café {
+    background: url("../assets/the-night-cafe/thumbnail.jpg") no-repeat center center; }
+  .the-basket-of-apples {
+    background: url("../assets/the-basket-of-apples/thumbnail.jpg") no-repeat center center; }
+  .the-boy-in-the-red-vest {
+    background: url("../assets/the-boy-in-the-red-vest/thumbnail.jpg") no-repeat center center; }
+  .arnolfini-portrait {
+    background: url("../assets/arnolfini-portrait/thumbnail.jpg") no-repeat center center; }
+  .mona-lisa {
+    background: url("../assets/mona-lisa/thumbnail.jpg") no-repeat center center; }
+  .the-swing {
+    background: url("../assets/the-swing/thumbnail.jpg") no-repeat center center; } }
 
-.girl-with-a-pearl-earring {
-  background: url("../assets/girl-with-pearl-earring/thumbnail.jpg") no-repeat center center; }
+@media only screen and (min-device-width: 768px) and (min-width: 768px) and (max-width: 921px) {
+  .starry-night {
+    background: url("../assets/starry-night/thumbnail.jpg") no-repeat center center; }
+  .girl-with-a-pearl-earring {
+    background: url("../assets/girl-with-pearl-earring/thumbnail.jpg") no-repeat center center; }
+  .guernica {
+    background: url("../assets/guernica/thumbnail.jpg") no-repeat center center; }
+  .penitent-magdalene {
+    background: url("../assets/penitent-magdalene/thumbnail.jpg") no-repeat center center; }
+  .the-storm-on-the-sea-of-galilee {
+    background: url("../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg") no-repeat center center; }
+  .the-great-wave-off-kanagawa {
+    background: url("../assets/the-great-wave-off-kanagawa/thumbnail.jpg") no-repeat center center; }
+  .van-gogh-self-portrait {
+    background: url("../assets/van-gogh-self-portrait/thumbnail.jpg") no-repeat center center; }
+  .the-sleeping-gypsy {
+    background: url("../assets/the-sleeping-gypsy/thumbnail.jpg") no-repeat center center; }
+  .lady-with-an-ermine {
+    background: url("../assets/lady-with-an-ermine/thumbnail.jpg") no-repeat center center; }
+  .the-night-café {
+    background: url("../assets/the-night-cafe/thumbnail.jpg") no-repeat center center; }
+  .the-basket-of-apples {
+    background: url("../assets/the-basket-of-apples/thumbnail.jpg") no-repeat center center; }
+  .the-boy-in-the-red-vest {
+    background: url("../assets/the-boy-in-the-red-vest/thumbnail.jpg") no-repeat; }
+  .arnolfini-portrait {
+    background: url("../assets/arnolfini-portrait/thumbnail.jpg") no-repeat center center; }
+  .mona-lisa {
+    background: url("../assets/mona-lisa/thumbnail.jpg") no-repeat center center; }
+  .the-swing {
+    background: url("../assets/the-swing/thumbnail.jpg") no-repeat center center; } }
 
-.guernica {
-  background: url("../assets/guernica/thumbnail.jpg") no-repeat center center; }
-
-.penitent-magdalene {
-  background: url("../assets/penitent-magdalene/thumbnail.jpg") no-repeat center center; }
-
-.the-storm-on-the-sea-of-galilee {
-  background: url("../assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg") no-repeat center center; }
-
-.the-great-wave-off-kanagawa {
-  background: url("../assets/the-great-wave-off-kanagawa/thumbnail.jpg") no-repeat center center; }
-
-.van-gogh-self-portrait {
-  background: url("../assets/van-gogh-self-portrait/thumbnail.jpg") no-repeat center center; }
-
-.the-sleeping-gypsy {
-  background: url("../assets/the-sleeping-gypsy/thumbnail.jpg") no-repeat center center; }
-
-.lady-with-an-ermine {
-  background: url("../assets/lady-with-an-ermine/thumbnail.jpg") no-repeat center center; }
-
-.the-night-café {
-  background: url("../assets/the-night-cafe/thumbnail.jpg") no-repeat center center; }
-
-.the-basket-of-apples {
-  background: url("../assets/the-basket-of-apples/thumbnail.jpg") no-repeat center center; }
-
-.the-boy-in-the-red-vest {
-  background: url("../assets/the-boy-in-the-red-vest/thumbnail.jpg") no-repeat center center; }
-
-.arnolfini-portrait {
-  background: url("../assets/arnolfini-portrait/thumbnail.jpg") no-repeat center center; }
-
-.mona-lisa {
-  background: url("../assets/mona-lisa/thumbnail.jpg") no-repeat center center; }
-
-.the-swing {
-  background: url("../assets/the-swing/thumbnail.jpg") no-repeat center center; }
+@media only screen and (min-device-width: 922px) and (min-width: 922px) {
+  .starry-night {
+    background: url("../assets/starry-night/hero-large.jpg") no-repeat center center; }
+  .girl-with-a-pearl-earring {
+    background: url("../assets/girl-with-pearl-earring/hero-large.jpg") no-repeat center center; }
+  .guernica {
+    background: url("../assets/guernica/hero-large.jpg") no-repeat center center; }
+  .penitent-magdalene {
+    background: url("../assets/penitent-magdalene/hero-large.jpg") no-repeat center center; }
+  .the-storm-on-the-sea-of-galilee {
+    background: url("../assets/the-storm-on-the-sea-of-galilee/hero-large.jpg") no-repeat center center; }
+  .the-great-wave-off-kanagawa {
+    background: url("../assets/the-great-wave-off-kanagawa/hero-large.jpg") no-repeat center center; }
+  .van-gogh-self-portrait {
+    background: url("../assets/van-gogh-self-portrait/hero-large.jpg") no-repeat center center; }
+  .the-sleeping-gypsy {
+    background: url("../assets/the-sleeping-gypsy/hero-large.jpg") no-repeat center center; }
+  .lady-with-an-ermine {
+    background: url("../assets/lady-with-an-ermine/hero-large.jpg") no-repeat center center; }
+  .the-night-café {
+    background: url("../assets/the-night-cafe/hero-large.jpg") no-repeat center center; }
+  .the-basket-of-apples {
+    background: url("../assets/the-basket-of-apples/hero-large.jpg") no-repeat center center; }
+  .the-boy-in-the-red-vest {
+    background: url("../assets/the-boy-in-the-red-vest/hero-large.jpg") no-repeat center center; }
+  .arnolfini-portrait {
+    background: url("../assets/arnolfini-portrait/hero-large.jpg") no-repeat center center; }
+  .mona-lisa {
+    background: url("../assets/mona-lisa/hero-large.jpg") no-repeat center center; }
+  .the-swing {
+    background: url("../assets/the-swing/hero-large.jpg") no-repeat center center; } }

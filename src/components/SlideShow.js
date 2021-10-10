@@ -86,19 +86,21 @@ function SlideShow(props) {
 
         setGallery(galleriaJSON[galleriaIndex]);
         
+        if(isSlideShowActive) {
 
+        }
     }, [galleriaIndex, isSlideShowActive]);
 
     return (
         <React.Fragment>
             <div className={"slide-show-container"}>
-                <div className={"slide-show-overlay"}>
+                <div className={"slide-show-overlay"} onClick={closeImage}>
                     <div className={"slide-show-overlay-box"}>
                         <div onClick={closeImage} className={"slide-show-overlay-close"}>
                             <p>CLOSE</p>
                         </div>
                         <div className={"slide-show-overlay-image"}>
-                            <img src={`/frontendmentor-galleria-slideshow-site/${gallery.images.gallery}`} />
+                            <img src={`/frontendmentor-galleria-slideshow-site/${gallery.images.gallery}`} alt={"gallery"}/>
                         </div>
                     </div>
                 </div>
@@ -123,6 +125,10 @@ function SlideShow(props) {
                             <h3>{gallery.artist.name}</h3>
                         </div>
                     </div>
+
+                    <div className={"slide-show-paragraph-avatar-tablet"}>
+                        <img src={`/frontendmentor-galleria-slideshow-site/${gallery.artist.image}`} alt={"artist"}/>
+                    </div>
                 </div>
 
                 <div className={"slide-show-paragraph-wrapper"}>
@@ -132,6 +138,14 @@ function SlideShow(props) {
 
                     <div className={"slide-show-transparent-text"}>
                         <p>{gallery.year}</p>
+                    </div>
+
+                    <div className={"slide-show-paragraph-tablet"}>
+                        <p>{gallery.description}</p>
+                    </div>
+
+                    <div className={"slide-show-source-tablet"}>
+                        <a href={gallery.source}>GO TO SOURCE</a>
                     </div>
                 </div>
 
@@ -156,10 +170,10 @@ function SlideShow(props) {
                         <p id={"artist"}>{gallery.artist.name}</p>
                     </div>
                     <div className={"slide-show-artist-title-next-previous"}>
-                        <div onClick={previousImage} className={"slide-show-artist-title-next-previous-icon"}>
+                        <div id={"previous"} onClick={previousImage} className={"slide-show-artist-title-next-previous-icon"}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-back-button.svg`} alt={"previous"} />
                         </div>
-                        <div onClick={nextImage} className={`slide-show-artist-title-next-previous-icon `}>
+                        <div id={"next"} onClick={nextImage} className={`slide-show-artist-title-next-previous-icon`}>
                             <img src={`/frontendmentor-galleria-slideshow-site/assets/shared/icon-next-button.svg`} alt={"next"} />
                         </div>
                     </div>
