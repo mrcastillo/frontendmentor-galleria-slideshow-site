@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.022dd0d8.chunk.css",
-    "main.js": "/static/js/main.d598e33c.chunk.js",
-    "main.js.map": "/static/js/main.d598e33c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b148c171.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b148c171.js.map",
-    "static/js/2.b8dee90b.chunk.js": "/static/js/2.b8dee90b.chunk.js",
-    "static/js/2.b8dee90b.chunk.js.map": "/static/js/2.b8dee90b.chunk.js.map",
-    "static/js/3.bdb44b44.chunk.js": "/static/js/3.bdb44b44.chunk.js",
-    "static/js/3.bdb44b44.chunk.js.map": "/static/js/3.bdb44b44.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.022dd0d8.chunk.css.map": "/static/css/main.022dd0d8.chunk.css.map",
-    "static/js/2.b8dee90b.chunk.js.LICENSE.txt": "/static/js/2.b8dee90b.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/thumbnail.f9505273.jpg"
+    "main.css": "/frontendmentor-galleria-slideshow-site/static/css/main.efb61ef4.chunk.css",
+    "main.js": "/frontendmentor-galleria-slideshow-site/static/js/main.d598e33c.chunk.js",
+    "main.js.map": "/frontendmentor-galleria-slideshow-site/static/js/main.d598e33c.chunk.js.map",
+    "runtime-main.js": "/frontendmentor-galleria-slideshow-site/static/js/runtime-main.f4b151e8.js",
+    "runtime-main.js.map": "/frontendmentor-galleria-slideshow-site/static/js/runtime-main.f4b151e8.js.map",
+    "static/js/2.b8dee90b.chunk.js": "/frontendmentor-galleria-slideshow-site/static/js/2.b8dee90b.chunk.js",
+    "static/js/2.b8dee90b.chunk.js.map": "/frontendmentor-galleria-slideshow-site/static/js/2.b8dee90b.chunk.js.map",
+    "static/js/3.bdb44b44.chunk.js": "/frontendmentor-galleria-slideshow-site/static/js/3.bdb44b44.chunk.js",
+    "static/js/3.bdb44b44.chunk.js.map": "/frontendmentor-galleria-slideshow-site/static/js/3.bdb44b44.chunk.js.map",
+    "index.html": "/frontendmentor-galleria-slideshow-site/index.html",
+    "static/css/main.efb61ef4.chunk.css.map": "/frontendmentor-galleria-slideshow-site/static/css/main.efb61ef4.chunk.css.map",
+    "static/js/2.b8dee90b.chunk.js.LICENSE.txt": "/frontendmentor-galleria-slideshow-site/static/js/2.b8dee90b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/frontendmentor-galleria-slideshow-site/static/media/thumbnail.f9505273.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b148c171.js",
+    "static/js/runtime-main.f4b151e8.js",
     "static/js/2.b8dee90b.chunk.js",
-    "static/css/main.022dd0d8.chunk.css",
+    "static/css/main.efb61ef4.chunk.css",
     "static/js/main.d598e33c.chunk.js"
   ]
 }
