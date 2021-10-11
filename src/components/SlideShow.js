@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import galleriaJSON from "../json/data.json";
+import { enableAutoTTS } from 'enable-auto-tts';
 
 //SlideShow Context to check if the slideshow is currently active.
 import { SlideShowContext } from "./context/SlideShowContext";
@@ -8,6 +9,7 @@ import { GalleriaIndexContext } from "./context/GalleriaIndexContext";
 
 
 function SlideShow(props) {
+    enableAutoTTS();
     var galleriaTextToSpeech = new SpeechSynthesisUtterance();
     galleriaTextToSpeech.lang = "en";
     galleriaTextToSpeech.voice = window.speechSynthesis.getVoices[0];

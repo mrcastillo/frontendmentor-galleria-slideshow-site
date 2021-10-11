@@ -152,6 +152,19 @@ a {
 .disable {
   opacity: .3; }
 
+.app-container .no-match {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50%; }
+  .app-container .no-match h1 {
+    font-size: 56px;
+    letter-spacing: 1.94px; }
+  .app-container .no-match a {
+    font-size: 18px; }
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3), (max-device-width: 667px), (max-width: 767px) {
   .starry-night {
     background: url("../assets/starry-night/thumbnail.jpg") no-repeat center center; }

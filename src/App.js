@@ -1,5 +1,5 @@
 import { React } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 import Menu from "./components/Menu";
 import Galleria from "./components/Galleria";
@@ -10,9 +10,11 @@ import GalleriaIndexProvider from "./components/context/GalleriaIndexContext";
 
 const NoMatch = () => {
   return(
-    <div classname={"no-match"}>
+    <div className={"no-match"}>
       <h1>No Page Found</h1>
-      <p>Go Back Home</p>
+      <br/>                                                                                                                                                                                                                                                                                                     
+      <Link to={"/"}>Go Back Home</Link>
+      <Redirect to={"/"} />
     </div>
   )
 }

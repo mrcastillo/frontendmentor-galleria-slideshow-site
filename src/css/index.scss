@@ -20,6 +20,29 @@ a {
     opacity: .3;
 }
 
+.app-container {
+    .no-match {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50%;
+        
+        h1 {
+            font-size: $head-1-s;
+            letter-spacing: 1.94px;
+        }
+        
+        a {
+            font-size: $head-2-s;
+        }
+        
+    
+    }
+}
+
 @import "./sizes/mobile.scss";
 @import "./sizes/tablet.scss";
 @import "./sizes/desktop.scss";
+
